@@ -19,9 +19,26 @@ namespace CSharp.Net_Quiz2
     /// </summary>
     public partial class Question5 : Window
     {
+        int clickCounter = 0;
         public Question5()
         {
             InitializeComponent();
+        }
+
+        private void btn1_Click(object sender, RoutedEventArgs e)
+        {
+            clickCounter++;
+            btn1.Content = clickCounter;
+            if (clickCounter % 2 == 0)
+            {
+                tvTree1.Items.Add(clickCounter);
+                btn1.Background = Brushes.Blue;
+            }
+            else if (clickCounter % 2 == 1)
+            {
+                tvTree2.Items.Add(clickCounter);
+                btn1.Background = Brushes.Red;
+            }
         }
     }
 }
