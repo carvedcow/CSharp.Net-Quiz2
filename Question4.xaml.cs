@@ -37,28 +37,24 @@ namespace CSharp.Net_Quiz2
 
         private void btnShowStudent_Click(object sender, RoutedEventArgs e)
         {
-            selectedStudents.Add(students[Int32.Parse(tbStudentID.Text) - 1]);
+            Student selectedStudent;
 
-            //foreach (Student s in selectedStudents)
-            //{
-            //    if (s.Id == Int32.Parse(tbStudentID.Text))
-            //    {
-            //        MessageBox.Show("Student is already in the list.");
-            //        break;
-            //    }
-            //    else
-            //    {
-            //        foreach (Student s2 in students)
-            //        {
+            foreach (Student s in students)
+            {
+                if (s.Id == Int32.Parse(tbStudentID.Text))
+                {
+                    selectedStudent = s;
+                    if (selectedStudents.Contains(selectedStudent))
+                    {
+                        MessageBox.Show("Student is already in the list.", "Warning");
+                    }
+                    else
+                    {
+                        selectedStudents.Add(selectedStudent);
+                    }
+                }
 
-            //            if (s2.Id == Int32.Parse(tbStudentID.Text))
-            //            {
-            //                selectedStudents.Add(s2);
-            //            }
-            //        }
-            //    }
-            //}
-
+            }
         }
     }
 
