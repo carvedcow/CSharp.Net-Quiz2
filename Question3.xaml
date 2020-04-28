@@ -1,0 +1,23 @@
+﻿<Window x:Class="CSharp.Net_Quiz2.Question3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSharp.Net_Quiz2"
+        mc:Ignorable="d"
+        Title="Question3" Height="150" Width="200">
+    <Grid>
+        <TabControl>
+        <TabItem Header="Tab1">
+                <StackPanel>
+                    <Label>Check to View Tab2</Label>
+                    <CheckBox x:Name="cb_Tab2" Checked="cb_Tab2_Checked" Unchecked="cb_Tab2_Unchecked">Tab 2</CheckBox>
+                </StackPanel>
+        </TabItem>
+        <TabItem x:Name="ti_tab2"  Visibility="Hidden" Header="Tab2">
+                <Label>I've been found out!</Label>
+        </TabItem>
+
+        </TabControl>
+    </Grid>
+</Window>
